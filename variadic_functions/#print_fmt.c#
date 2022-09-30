@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdarg.h>
+
+void print_all(const char * const format, ...);
+
+int main(void){
+	print_all("ceis", 'B', 3, "stSchool");
+	return (0);
+}
+
+void print_all(const char * const format, ...){
+	va_list prnt;
+	char *sp;
+	char x = 0, i = 0, p = 0;
+	va_start(prnt, *format);
+
+	while (format[i]){
+		p++;
+		i++;
+	}
+	while (format[x]){
+		switch(format[x]){
+		case 'c':
+			printf("%c ", va_arg(prnt, int));
+			break;
+		case 'i':
+			printf("%d", va_arg(prnt, int));
+			break;
+		case 'f':
+			printf("%f", va_arg(prnt, double));
+			break;
+		case 's':
+			printf("%s", va_arg(prnt, char*));
+			break;
+		}
+		if (p--)
+			printf(", ");
+		x++;
+	}
+}
