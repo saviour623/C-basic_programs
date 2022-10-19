@@ -66,7 +66,7 @@ int main(void)
 	printf("%d, %d, %d\n", f, g, h);
 
 	/* function of function to pointers */
-	int (*returnf())(int, int) = &return1()l;
+	int (*returnf())(int, int) = &return1();
 	int k  = (*returnf())(x,y);
 
 	printf("%d\n", k);
