@@ -20,7 +20,7 @@ int main(void)
     print_dog(&my_dog);
     return (0);
 }
-
+//pointer to struct
 void print_dog(struct dog *d){
 	if (d == NULL)
 		printf("(Nil)\n");

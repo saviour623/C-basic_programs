@@ -1,0 +1,13 @@
+#include <stdio.h>
+void let_m(int){
+	printf("%d", a);
+}
+
+int main(void){
+	printf("Enter size for shape\n");
+	int n;
+	//scanf("%d", &n);
+	n = 5;
+	let_m(n);
+	return 0;
+}

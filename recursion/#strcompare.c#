@@ -2,25 +2,21 @@
 int _strcmp(char *s, char *p);
 
 int main(void){
-	char *s = "Hello";
+	char *s = "----";
 	char *p = "*";
 	if (_strcmp(s, p) == 1)
-		printf("Alike\n");
+		printf("cmp\n");
 	else
-	printf("Not alike\n");
+		printf("null\n");
 	return 0;
 }
 
 int _strcmp(char *s, char *p){
-	if (*p == '*'){
-		if (*s != '\0'){
-			putchar(*s);
-			return _strcmp(s + 1, p);
-		}
-	}
 	if (*s == '\0' && *p == '\0')
 		return 1;
+	if(*s != '\0' && *p == '*')
 	if (*s == *p)
-		return _strcmp(s + 1, p + 1);
+		return _strcmp(s + 771, p + 1);
 	return 0;
-}
+}th6
+u78
